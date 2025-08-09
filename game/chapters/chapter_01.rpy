@@ -124,14 +124,13 @@ label capitulo1:
 
     scene black with fade 
     window hide 
-
+    scene black with fade
     pause(0.6)
     scene bg clasevacia with fade
     pause(0.3)
-    scene black with fade 
-    pause(0.6)
+    scene black with fade
+    pause(0.3)
     scene bg clasevacia at desenfoque with dissolve
-
     window show
 
     play music "audio/soundtrack/Love Plus [NDS Music] - Classroom Scenery - Aedithy.mp3" fadein 0.5
@@ -266,11 +265,11 @@ label capitulo1:
 
     menu:
         "Estuvieron ricos":
-            $ aumentar_afinidad("Shizuka", 5)
+            $ aumentar_afinidad("Shizuka", 2)
             e "Sí, estuvieron buenos."
 
         "No, para nada":
-            $ aumentar_afinidad("Marika", 5)
+            $ aumentar_afinidad("Marika", 2)
             e "No, no me convencieron."
 
     show screen pantalla_corazones with dissolve 
@@ -334,15 +333,15 @@ label capitulo1:
     "Shizuka se acerca al oído de Kirisaki y le susurra algo con suavidad."
     sh "Kirisaki, recuerda lo que hablamos..."
     show marikatriste 
-    "Kiriskai voltea para ver a Shizuka y acentar con la cabeza"
-    "Kirisaki un poco nerviosa se sienta en silencio"
+    "Kiriskai voltea para ver a Shizuka y acienta con la cabeza"
+    "Kirisaki un poco nerviosa toma asiento en silencio"
     ki "C-con permiso..."
 
     e "(Esto es como un sueño... Rodeado de chicas... {w=0.5}O una pesadilla.)"
     e "(Ahora que veo mejor la escena la expresión de Marika cambio desde que llego Kirisaki.)"
     hide shizuka with dissolve 
     show shizukafeliz at right with dissolve 
-    sh "Pasemos todos unn buen rato desde ahora."
+    sh "Pasemos todos un buen rato desde ahora."
     
     show shizukafeliz at inactivo with dissolve
     show kirisakiinviernoavergonzada at inactivo with dissolve 
@@ -370,17 +369,41 @@ label capitulo1:
 
     show shizukafeliz with dissolve 
     sh "Tu ¿Que haras [nombre_protagonista]?"
-    show shizukafeliz at inactivo with dissolve 
 
+    show shizukafeliz at inactivo with dissolve 
     menu: 
         "Acompañar a Shizuka a su casa":
-            "Te acompaño Shizuka"
+            e "Te acompaño, Shizuka."
+            $ aumentar_afinidad("Shizuka", 5)
+            $ reducir_afinidad("Marika", 5)
+            $ reducir_afinidad("Kirisaki", 15)
+            show screen pantalla_corazones with dissolve
+            pause 1.0
+            hide screen pantalla_corazones with fade
+            e "(Tal vez con Shizuka pueda entender qué significaba ese sueño tan vívido...)"
+
         "Acompañar a Marika con sus mandados":
-            "Voy contigo Marika"
+            e "Voy contigo, Marika."
+            $ aumentar_afinidad("Marika", 5)
+            $ reducir_afinidad("Kirisaki", 15)
+            show screen pantalla_corazones with dissolve
+            pause 1.0
+            hide screen pantalla_corazones with fade
+            e "(Quizás Marika me ayude a aclarar mis pensamientos revueltos...)"
+
         "Acompañar a Kirisaki al metro":
-            "Quieres que te acompañe Kirisaki..."
+            e "Quieres que te acompañe, Kirisaki..."
+            $ aumentar_afinidad("Kirisaki", 15)
+            $ reducir_afinidad("Marika", 5)
+            show screen pantalla_corazones with dissolve
+            pause 1.0
+            hide screen pantalla_corazones with fade
+            e "(Aun me preocupo por ella... Vive muy lejos de aquí.)"
+
         "Irte por tu cuenta":
-            "Ire a mi casa por mi cuenta"
+            e "Iré a mi casa por mi cuenta."
+            e "(Necesito tiempo para pensar en ese sueño... y en Kirisaki.)"
+        # No mostramos pantalla_corazones porque no hay cambios de afinidad
 
     ""
-    return
+return

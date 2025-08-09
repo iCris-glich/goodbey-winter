@@ -1,4 +1,4 @@
-# 0_afanidades.rpy
+# 0_afinidades.rpy
 # ================================
 # VARIABLES GLOBALES DE AFINIDAD
 # ================================
@@ -6,13 +6,18 @@
 default afinidad = {
     "Shizuka": 0,
     "Marika": 0,
+    "Kirisaki": 0,
+    "Karen": 0
 }
 
 default corazones = {
     "Shizuka": 0,
     "Marika": 0,
+    "Kirisaki": 0,
+    "Karen": 0
 }
 
+default ultimo_cambio_chica = None  # Rastrea la última chica con aumento de afinidad
 
 # ================================
 # FUNCIONES DE AFINIDAD
@@ -27,14 +32,17 @@ init python:
 
     def aumentar_afinidad(nombre, puntos):
         """Aumenta la afinidad de un personaje"""
+        global ultimo_cambio_chica
         if nombre in afinidad:
             afinidad[nombre] += puntos
+            ultimo_cambio_chica = nombre  # Priorizar aumentos
             actualizar_corazones()
 
     def reducir_afinidad(nombre, puntos):
         """Reduce la afinidad de un personaje"""
         if nombre in afinidad:
             afinidad[nombre] = max(0, afinidad[nombre] - puntos)
+            # No actualizamos ultimo_cambio_chica para priorizar aumentos
             actualizar_corazones()
 
     def actualizar_corazones():
