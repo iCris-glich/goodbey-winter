@@ -203,8 +203,8 @@ label capitulo1:
     scene bg comiendo_restaurante with fade
     e "(Mejor dejo el sueño a un lado por ahora y disfruto el momento.)"
 
-    scene bg calle with fade 
-    scene bg calle at desenfoque with dissolve 
+    scene bg restaurante with fade 
+    scene bg restaurante at desenfoque with dissolve 
     show shizukafeliz with dissolve 
     sh "Nada como un buen plato de ramen."
     sh "Deseo volver a venir, estuvo muy bueno."

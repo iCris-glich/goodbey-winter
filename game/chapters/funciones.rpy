@@ -5,4 +5,4 @@ label pedir_nombre:
     $ nombre_protagonista = temp_nombre.strip()
     if nombre_protagonista == "":
         $ nombre_protagonista = "Makoto"
-    return
+return
