@@ -11,6 +11,7 @@ image bg escuela_pasillo = im.Scale("images/backgrounds/pasillo.png", 1920, 1080
 image bg calle = im.Scale("images/backgrounds/calle.png", 1920, 1080)
 image bg restaurante = im.Scale("images/backgrounds/restaurante.png", 1920, 1080)
 image bg comiendo_restaurante = im.Scale("images/backgrounds/comiendo_en_el_restaurante.png", 1920, 1080)
+image bg akihabara = im.Scale("images/backgrounds/akihabara.png", 1920, 1080)
 
 # ==============================
 # SPRITES DE PERSONAJES

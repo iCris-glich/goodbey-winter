@@ -2,6 +2,8 @@ label capitulo1:
 
     scene bg invierno at rederisionar with wipeup
     play music "audio/soundtrack/Love Plus [NDS Music] - Silent Night - Aedithy.mp3" fadein 1.0
+    play sound "audio/soundtrack/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
+    "*Murmullos*"
 
     "Navidad en Japón es una época muy hermosa y llena de amor."
     "Los jóvenes se declaran y todos están en parejas."
@@ -9,8 +11,8 @@ label capitulo1:
     pause(0.5)
 
     scene bg desdearriba at rederisionar with dissolve
-    play sound "audio/soundtrack/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
-    "*Murmullos*"
+    play sound "audio/effects/El ruido - Calle.mp3"
+    "Los autos pasan de forma rutinaria"
     pause(1.0)
     hide desdearriba with dissolve
 
@@ -18,9 +20,10 @@ label capitulo1:
     "Tokyo es el epicentro de todo este alboroto romántico y navideño."
     hide invierno with dissolve
 
-    pause(2.0)
+    pause(0.5)
 
     "Por eso es increíble que esto esté pasando..."
+    stop sound 
     stop music fadeout 0.5
     pause(1.0)
 
@@ -48,6 +51,8 @@ label capitulo1:
     cha1 "Estoy declarando mis sentimientos hacia ti... {w=1}Será mejor que los aceptes... tonto..."
     hide shizukahablandoavergonzada_blur with dissolve 
     show shizukaavergonzada_blur at left with dissolve
+
+    e "¿Ehh?..."
 
     hide marikaavergonzada_blur with dissolve 
     show marikahablandoavergonzada_blur at right with dissolve
@@ -111,7 +116,6 @@ label capitulo1:
         show marika_blur at center with dissolve 
         cha2 "Entonces así te llamabas..."
 
-    cha2 "¡DESPIERTA!"
     pause(0.5)
     cha2 "¡DESPIERTA, [nombre_protagonista]!"
 
@@ -121,15 +125,15 @@ label capitulo1:
     scene black with fade 
     window hide 
 
-    pause(0.5)
-    scene bg clasevacia with fade
-    pause(0.5)
-    scene black
-    pause(0.5)
-    scene bg clasevacia
     pause(0.6)
-    scene black
-    pause(0.5)
+    scene bg clasevacia with fade
+    pause(0.3)
+    scene black with fade 
+    pause(0.3)
+    scene bg clasevacia with fade 
+    pause(0.3)
+    scene black with fade 
+    pause(0.6)
     scene bg clasevacia at desenfoque with dissolve
 
     window show
@@ -162,13 +166,15 @@ label capitulo1:
     show marika at inactivo with dissolve
 
     sh "¡Hola, [nombre_protagonista]! Por fin despiertas."
-    sh "Ya tenemos que irnos. Hoy no tengo actividades del club, así que podemos ir a donde quieras."
+    sh "Ya tenemos que irnos. Tienes suerte [nombre_protagonista] hoy suspendieron las actividades del club."
+    sh "¡Tengo toda la tarde libre!"
 
     hide marika with dissolve
     show marikafeliz at right with dissolve
     show shizukafeliz at inactivo with dissolve 
 
-    ma "¿Y si vamos a comer ramen a ese nuevo puesto del distrito de Fukushima?"
+    ma "¿Y si vamos a comer ramen a ese nuevo puesto en Akihabara?"
+    ma "He escuchado que es muy bueno"
 
     hide shizukafeliz with dissolve 
     pause(0.3)
@@ -176,10 +182,11 @@ label capitulo1:
     pause(0.3)
     hide shizuka with dissolve 
     show shizukafeliz at left  with dissolve  
-    ma "¡Sí! ¡Vamos, [nombre_protagonista]!"
+    ma "¡Sí! ¡Buena idea Marika, [nombre_protagonista] vamos!"
 
     e "Está bien..."
     e "(Aunque sigo pensando en ese sueño... ¿quiénes serían ellas?)"
+    e "(Me parecian familiares esos rostros, como si ya los hubiera visto.)"
 
     scene bg escuela_pasillo with fade
     pause 0.5 
@@ -278,7 +285,7 @@ label capitulo1:
     show shizukafeliz at inactivo with dissolve 
     show kirisakiinviernoavergonzada at activo with dissolve
 
-    e "(Kirisaki... {w=0.5}mi amiga de la infancia... {w=0.5}y mi ex.)"
+    e "(Kirisaki... {w=0.5}mi amiga de la infancia...)"
     e "(Nuestra historia no es sencilla, pero tampoco necesito revolverla ahora.)"
     
     hide kirisakiinviernoavergonzada with dissolve
@@ -293,6 +300,28 @@ label capitulo1:
 
     "Shizuka se acerca al oído de Kirisaki y le susurra algo con suavidad."
     sh "Kirisaki, recuerda lo que hablamos..."
-    pause(0.7)
+    "Kirisaki un poco nerviosa se sienta en silencio"
+    ki "C-con permiso..."
 
+    e "(Ahora que veo mejor la escena la expresión de Marika cambio desde que llego Kirisaki.)"
+    hide shizuka with dissolve 
+    show shizukafeliz at right with dissolve 
+    sh "Pasemos todos unn buen rato desde ahora."
+    
+    show shizukafeliz at inactivo with dissolve
+    show kirisakiinviernoavergonzada at inactivo with dissolve 
+    show marikatriste at activo with dissolve 
+    ma "Si..."
+    pause(0.5)
+
+    scene black with fade 
+
+    "Depues de ese momento todos estuvieron tranquilos hasta que llego la hora de irse."
+    
+    scene bg akihabara with fade 
+
+    show shizukafeliz with dissolve 
+    sh "Estuvo muy buena la comida, pero ya devo irme a casa"
+    hide shizukafeliz with dissolve 
+    show marika with dissolve 
     return
