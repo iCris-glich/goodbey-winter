@@ -54,3 +54,9 @@ transform desenfoque:
 init python:
     preferences.text_cps = 30  # o la velocidad que quieras (caracteres por segundo)
 
+transform golpe_lateral:
+    linear 0.05 xoffset 20
+    linear 0.05 xoffset -20
+    linear 0.05 xoffset 15
+    linear 0.05 xoffset -15
+    linear 0.05 xoffset 0

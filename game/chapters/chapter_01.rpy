@@ -129,10 +129,6 @@ label capitulo1:
     scene bg clasevacia with fade
     pause(0.3)
     scene black with fade 
-    pause(0.3)
-    scene bg clasevacia with fade 
-    pause(0.3)
-    scene black with fade 
     pause(0.6)
     scene bg clasevacia at desenfoque with dissolve
 
@@ -157,6 +153,14 @@ label capitulo1:
 
     e "Nada que importe."
 
+    ma "Tienes una mirada perdida... Como la de un pervertido..."
+
+    e "Hey mide tus palabras."
+
+    ma "No me digas que hacer pervertido"
+
+    "Marika retrocede un poco, se esta tomando muy real esto."
+
     show shizuka with dissolve 
     show marika at moverCentroADerecha
     show shizuka at moverCentroAIzquierda
@@ -165,14 +169,32 @@ label capitulo1:
     show shizukafeliz at left  with dissolve 
     show marika at inactivo with dissolve
 
+    sh "¡Hey, Hey!, veo que se divierten sin la gran Shizuka"
+    sh "JA JA JA"
+
+    "Shizuka voltea para verte"
+
     sh "¡Hola, [nombre_protagonista]! Por fin despiertas."
-    sh "Ya tenemos que irnos. Tienes suerte [nombre_protagonista] hoy suspendieron las actividades del club."
+    sh "Dormites mucho en clases, estabas soñando acaso con..."
+    sh "{cps=5}Conmigo..."
+    "Shizuka se rie levemente"
+
+    e "Deja de bromear así quieres."
+
+    "Levantas tu brazo para darle un leve golpe a Shizuka en la cabeza."
+    play sound "audio/effects/golpe.mp3"
+    pause 0.5
+
+    show shizukafeliz at golpe_lateral
+    sh "JI JI JI"
+    sh "Pero tienes suerte [nombre_protagonista] hoy suspendieron las actividades del club."
     sh "¡Tengo toda la tarde libre!"
 
     hide marika with dissolve
     show marikafeliz at right with dissolve
     show shizukafeliz at inactivo with dissolve 
 
+    ma "Como soy tan buena propondre algo."
     ma "¿Y si vamos a comer ramen a ese nuevo puesto en Akihabara?"
     ma "He escuchado que es muy bueno"
 
@@ -182,7 +204,7 @@ label capitulo1:
     pause(0.3)
     hide shizuka with dissolve 
     show shizukafeliz at left  with dissolve  
-    ma "¡Sí! ¡Buena idea Marika, [nombre_protagonista] vamos!"
+    sh "¡Sí! ¡Buena idea Marika, [nombre_protagonista] vamos!"
 
     e "Está bien..."
     e "(Aunque sigo pensando en ese sueño... ¿quiénes serían ellas?)"
@@ -192,7 +214,7 @@ label capitulo1:
     pause 0.5 
     scene bg escuela_afuera with fade
     pause 0.5
-    scene bg calle with fade 
+    scene bg akihabara with fade 
     show shizuka with dissolve 
     sh "¿Dónde quedaba..."
     hide shizuka with dissolve
@@ -203,7 +225,7 @@ label capitulo1:
 
     scene bg restaurante with fade 
     play sound "audio/soundtrack/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
-    play music "audio/soundtrack/Love Plus [NDS Music] - Holiday (Daylight) - Aedithy.mp3" fadein 1.0
+    play music "audio/soundtrack/Love Plus [NDS Music] - Holiday (Daylight) - Aedithy.mp3" fadein 0.5
     scene bg restaurante at desenfoque with dissolve
     show marikafeliz with dissolve 
     ma "Nada como el olor a fideos recién hechos... {w=0.5}Rápido, pidamos una mesa."
@@ -213,14 +235,17 @@ label capitulo1:
     scene bg restaurante with fade 
     scene bg restaurante at desenfoque with dissolve 
     show shizukafeliz with dissolve 
+    
     sh "Nada como un buen plato de ramen."
     sh "Deseo volver a venir, estuvo muy bueno."
+    
     show shizukafeliz at moverCentroADerecha
     pause 1.0
     show marika at left with dissolve 
     show shizukafeliz at inactivo with dissolve 
 
     ma "A mí no me gustó tanto..."
+    
     show marika at inactivo with dissolve
     hide shizukafeliz with dissolve 
     show shizuka at right with dissolve
@@ -228,15 +253,14 @@ label capitulo1:
 
     sh "Pero si fuiste tú quien dijo que viniéramos."
 
-    e "Ellas son amigas mías: Shizuka Shirogane, extrovertida y llena de energía..."
     show shizuka at inactivo with dissolve
     show marika at activo with dissolve 
+    
     ma "No hace falta que me lo recuerdes, en internet tenía muy buenas críticas."
     ma "Esos fideos tenían mucha grasa, ¡terminaré engordando así!"
-
-    e "...y Marika, hija del Grupo Tachibana. Inteligente, directa... y con un carácter único."
-
+    pause 0.3
     ma "¿Tú qué opinas, [nombre_protagonista]?"
+
     show shizuka at activo with dissolve 
     sh "Sí, ¿te gustaron?"
 
@@ -253,11 +277,14 @@ label capitulo1:
     pause 1.0
     hide screen pantalla_corazones with fade 
    
+    e "(Ya me siento mas relajado)"
+    "Alzas la mirada solo por curiosidad para ver el lugar"    
     e "(Un momento... ¿es ella?)"
+    "Ves un rostro familiarSs"
 
     "Entra en escena alguien más, alguien un poco inesperado."
     stop music fadeout 0.5 
-    pause 2.0
+    pause 1.5
 
     play music "audio/soundtrack/Love Plus [NDS Music] - Les larmes - Aedithy.mp3" fadein 0.5
     show kirisaki with dissolve
@@ -272,6 +299,9 @@ label capitulo1:
 
     hide marika with dissolve 
     show marikatriste at left with dissolve 
+
+    "La expresion de Marika cambio"
+
     show marikatriste at inactivo with dissolve 
     hide shizuka with dissolve 
     show shizukafeliz at right with dissolve 
@@ -294,15 +324,21 @@ label capitulo1:
     ki "No importa, vine porque Shizuka me invitó, no por otra razón..."
 
     hide kirisakiinviernohablandoavergonzada with dissolve 
-    show kirisakiinviernoavergonzada with dissolve 
+    show kirisakiinviernoavergonzada with dissolve
+
+    "El aire se siente un poco tenso desde la llegada de Kirisaki"
+
     hide shizukafeliz with dissolve 
     show shizuka at right with dissolve 
 
     "Shizuka se acerca al oído de Kirisaki y le susurra algo con suavidad."
     sh "Kirisaki, recuerda lo que hablamos..."
+    show marikatriste 
+    "Kiriskai voltea para ver a Shizuka y acentar con la cabeza"
     "Kirisaki un poco nerviosa se sienta en silencio"
     ki "C-con permiso..."
 
+    e "(Esto es como un sueño... Rodeado de chicas... {w=0.5}O una pesadilla.)"
     e "(Ahora que veo mejor la escena la expresión de Marika cambio desde que llego Kirisaki.)"
     hide shizuka with dissolve 
     show shizukafeliz at right with dissolve 
@@ -323,5 +359,28 @@ label capitulo1:
     show shizukafeliz with dissolve 
     sh "Estuvo muy buena la comida, pero ya devo irme a casa"
     hide shizukafeliz with dissolve 
+    
     show marika with dissolve 
+    ma "Yo me quedare, tengo algunas cosas que hacer"
+    hide marika with dissolve
+
+    show kirisaki with dissolve 
+    ki "Igual tengo que irme a casa, espero llegar a tiempo tomar el ultimo metro"
+    hide kirisaki with dissolve 
+
+    show shizukafeliz with dissolve 
+    sh "Tu ¿Que haras [nombre_protagonista]?"
+    show shizukafeliz at inactivo with dissolve 
+
+    menu: 
+        "Acompañar a Shizuka a su casa":
+            "Te acompaño Shizuka"
+        "Acompañar a Marika con sus mandados":
+            "Voy contigo Marika"
+        "Acompañar a Kirisaki al metro":
+            "Quieres que te acompañe Kirisaki..."
+        "Irte por tu cuenta":
+            "Ire a mi casa por mi cuenta"
+
+    ""
     return
