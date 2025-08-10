@@ -12,6 +12,13 @@ image bg calle = im.Scale("images/backgrounds/calle.png", 1920, 1080)
 image bg restaurante = im.Scale("images/backgrounds/restaurante.png", 1920, 1080)
 image bg comiendo_restaurante = im.Scale("images/backgrounds/comiendo_en_el_restaurante.png", 1920, 1080)
 image bg akihabara = im.Scale("images/backgrounds/akihabara.png", 1920, 1080)
+image bg estacion_tren = im.Scale("images/backgrounds/estacion_tren.png", 1920, 1080)
+image bg golpe_shizuka = im.Scale("images/backgrounds/golpe_shizuka.png", 1920, 1080)
+image bg estacion_metro = im.Scale("images/backgrounds/metro.png", 1920, 1080)
+image bg kirisaki_intimidada_metro = im.Scale("images/backgrounds/kirisaki_intimidada.png", 1920, 1080) 
+image bg protegiendo_kirisaki = im.Scale("images/backgrounds/protegiendo_kirisaki.png", 1920, 1080)
+image bg casa = im.Scale("images/backgrounds/casa.png", 1920, 1080)
+image bg cuarto = im.Scale("images/backgrounds/cuarto.png", 1920, 1080)
 
 # ==============================
 # SPRITES DE PERSONAJES
@@ -60,3 +67,11 @@ transform golpe_lateral:
     linear 0.05 xoffset 15
     linear 0.05 xoffset -15
     linear 0.05 xoffset 0
+
+transform sacudida:
+    linear 0.05 xoffset -10 yoffset -5
+    linear 0.05 xoffset 10 yoffset 5
+    linear 0.05 xoffset -10 yoffset -5
+    linear 0.05 xoffset 10 yoffset 5
+    linear 0.05 xoffset 0 yoffset 0
+    

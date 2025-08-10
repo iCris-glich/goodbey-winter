@@ -1,5 +1,5 @@
 ﻿label start:
 
-    jump capitulo1
+    jump introduccion
 
     return

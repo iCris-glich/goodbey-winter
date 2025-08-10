@@ -1,4 +1,4 @@
-label capitulo1:
+label introduccion:
 
     scene bg invierno at rederisionar with wipeup
     play music "audio/soundtrack/Love Plus [NDS Music] - Silent Night - Aedithy.mp3" fadein 1.0
@@ -61,7 +61,7 @@ label capitulo1:
     hide marikahablandoavergonzada_blur with dissolve 
     show marikaavergonzada_blur at right with dissolve 
 
-    e "Dos chicas preciosas se me declaran... esto no puede ser real."
+    e "Dos chicas se me declaran... esto no puede ser real."
     e "¿Y ahora que se supone que haga?"
     pause(0.3)
 
@@ -72,7 +72,7 @@ label capitulo1:
             pause(2.0)
             hide screen pantalla_corazones with fade
 
-            e "Elijo a Shizuka."
+            e "Elijo a la segunda chica."
             hide shizukaavergonzada_blur with dissolve 
             hide marikaavergonzada_blur with dissolve 
             show shizukafeliz_blur at left with dissolve
@@ -84,7 +84,7 @@ label capitulo1:
             pause(2.0)
             hide screen pantalla_corazones with fade
 
-            "Elijo a Marika."
+            "Elijo a la primer chica."
             hide marikaavergonzada_blur with dissolve 
             hide shizukaavergonzada_blur with dissolve
             show marikafeliz_blur at right with dissolve
@@ -370,7 +370,7 @@ label capitulo1:
     show shizukafeliz with dissolve 
     sh "Tu ¿Que haras [nombre_protagonista]?"
 
-    show shizukafeliz at inactivo with dissolve 
+    hide shizukafeliz with dissolve 
     menu: 
         "Acompañar a Shizuka a su casa":
             e "Te acompaño, Shizuka."
@@ -380,7 +380,8 @@ label capitulo1:
             show screen pantalla_corazones with dissolve
             pause 1.0
             hide screen pantalla_corazones with fade
-            e "(Tal vez con Shizuka pueda entender qué significaba ese sueño tan vívido...)"
+            e "(Tal vez con Shizuka se aclaren mis pensamientos..)"
+            jump seguir_a_shizuka
 
         "Acompañar a Marika con sus mandados":
             e "Voy contigo, Marika."
@@ -390,6 +391,7 @@ label capitulo1:
             pause 1.0
             hide screen pantalla_corazones with fade
             e "(Quizás Marika me ayude a aclarar mis pensamientos revueltos...)"
+            jump seguir_a_marika
 
         "Acompañar a Kirisaki al metro":
             e "Quieres que te acompañe, Kirisaki..."
@@ -399,11 +401,12 @@ label capitulo1:
             pause 1.0
             hide screen pantalla_corazones with fade
             e "(Aun me preocupo por ella... Vive muy lejos de aquí.)"
+            jump seguir_a_kirisaki
 
         "Irte por tu cuenta":
             e "Iré a mi casa por mi cuenta."
             e "(Necesito tiempo para pensar en ese sueño... y en Kirisaki.)"
         # No mostramos pantalla_corazones porque no hay cambios de afinidad
 
-    ""
+    
 return

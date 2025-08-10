@@ -10,7 +10,7 @@ transform corazon_anim(index):
     linear 0.15 zoom 1.2
     linear 0.15 zoom 1.0
 
-define MAX_CORAZONES = 5
+define MAX_CORAZONES = 10
 
 screen pantalla_corazones:
     frame:
@@ -58,3 +58,45 @@ screen pedir_nombre_screen():
             textbutton "Aceptar":
                 xalign 0.5
                 action Return()
+
+screen lobby_menu():
+    tag menu
+
+    add im.Scale("images/backgrounds/cuarto.png", 1920, 1080)
+
+    frame:
+        style "lobby_frame"
+        xalign 0.5
+        yalign 0.5
+        has vbox
+        spacing 30
+
+        textbutton "Dormir" action Jump("avanzar_día") style "lobby_button" at hover_scale
+        textbutton "Revisar progreso" action Jump("revisar_progreso") style "lobby_button" at hover_scale
+        textbutton "Guardar partida" action ShowMenu("save") style "lobby_button" at hover_scale
+        textbutton "Salir del juego" action Return() style "lobby_button" at hover_scale
+
+style lobby_frame:
+    background Solid("#00000080")  # negro con 50% opacidad
+    xminimum 520
+    yminimum 450
+    padding (40, 40)
+
+style lobby_button:
+    background "#66000088"  # semitransparente rojo oscuro
+    padding (20, 15)
+    font "fonts/SomeFont.ttf"
+    hover_background "#aa0000"
+    hover_foreground "#537c9750"
+    insensitive_background "#444444"
+    insensitive_foreground "#999999"
+    xminimum 400
+    yminimum 60
+    text_align 0.5
+
+transform hover_scale:
+    on hover:
+        linear 0.15 zoom 1.05
+    on idle:
+        linear 0.15 zoom 1.0
+
