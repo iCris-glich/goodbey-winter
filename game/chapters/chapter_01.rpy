@@ -1,7 +1,9 @@
 label introduccion:
 
     scene bg invierno at rederisionar with wipeup
-    play music "audio/soundtrack/Love Plus [NDS Music] - Silent Night - Aedithy.mp3" fadein 1.0
+    play music "audio/soundtrack/Love Plus [NDS Music] - Silent Night - Aedithy.mp3" fadein 0.5
+    
+    pause 0.5
     play sound "audio/soundtrack/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
     "*Murmullos*"
 

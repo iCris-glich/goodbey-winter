@@ -100,3 +100,13 @@ transform hover_scale:
     on idle:
         linear 0.15 zoom 1.0
 
+
+image llaves = im.Scale("images/llaves.png", 150, 150)
+screen presentacion_llaves:
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        padding(20,20)
+        add "llaves"
+

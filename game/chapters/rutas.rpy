@@ -18,7 +18,7 @@ label seguir_a_shizuka:
     sh "Oye, [nombre_protagonista], ¿puedo preguntarte algo?"
 
     e "*Suspiras*"
-    e "Sé lo que vas a preguntar, así que adelante... después de todo, yo también te haré una pregunta."
+    e "Sé lo que vas a preguntar, así que adelante... después de todo evitarlo solo despertara tu curiosidad."
 
     sh "¿Odias a Kirisaki?"
 
@@ -65,7 +65,6 @@ label seguir_a_shizuka:
     sh "Sí, ya falta poco para llegar a la estación."
 
     "La expresión de Shizuka cambió un poco, de estar alegre a pensativa."
-    "¿Qué quería preguntarte?"
 
     "Se acercan a la estación del tren."
 
@@ -76,9 +75,10 @@ label seguir_a_shizuka:
     stop music
 
     scene bg estacion_tren with fade
-    pause 0.5
+    pause 1.0
     play music "audio/soundtrack/Love Plus [NDS Music] - Mountain Scenery - Aedithy.mp3" fadein 0.5
 
+    e "..."
 
     show shizuka with dissolve 
 
@@ -117,6 +117,8 @@ label seguir_a_shizuka:
 
     sh "¡Ah!, tengo que tomar el tren."
     sh "Hablamos mañana, [nombre_protagonista]."
+
+    pause 2.0
 
     jump lobby
     return
@@ -204,6 +206,8 @@ label seguir_a_kirisaki:
     ki "Desde aquí puedo irme por mi cuenta."
     ki "Gracias por acompañarme [nombre_protagonista]"
 
+    hide kirisaki with dissolve 
+
     "Kirisaki empieza a alejarse."
     "Pero deja caer algo al suelo."
 
@@ -213,12 +217,15 @@ label seguir_a_kirisaki:
 
     e "Siempre haz sido muy distraida Kirisaki."
 
+    show screen presentacion_llaves with dissolve 
+    pause 0.5
+    hide screen presentacion_llaves with dissolve
     "Recoges las llaves para luego buscarla entre la multitud."
     play sound "game/audio/effects/El ruido - Calle.mp3" 
 
     pause 0.5 
 
-    "Depues de un rato logras encontrala pero en una escenea."
+    "Depues de un rato logras encontrala pero esta junto a unos tipos raros."
 
     scene bg kirisaki_intimidada_metro at sacudida 
 
