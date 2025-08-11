@@ -21,10 +21,6 @@ image bg casa = im.Scale("images/backgrounds/casa.png", 1920, 1080)
 image bg cuarto = im.Scale("images/backgrounds/cuarto.png", 1920, 1080)
 
 # ==============================
-# SPRITES DE PERSONAJES
-# ==============================
-
-# ==============================
 # TRANSFORMACIONES
 # ==============================
 

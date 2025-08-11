@@ -1,5 +1,5 @@
-image corazon_peq = im.Scale("images/backgrounds/corazon.png", 40, 40)
-image corazon_vacio_peq = im.Scale("images/backgrounds/corazon_vacio.png", 40, 40)
+image corazon_peq = im.Scale("images/corazon.png", 40, 40)
+image corazon_vacio_peq = im.Scale("images/corazon_vacio.png", 40, 40)
 
 transform corazon_anim(index):
     zoom 0.0
@@ -72,7 +72,7 @@ screen lobby_menu():
         spacing 30
 
         textbutton "Dormir" action Jump("avanzar_día") style "lobby_button" at hover_scale
-        textbutton "Revisar progreso" action Jump("revisar_progreso") style "lobby_button" at hover_scale
+        textbutton "Revisar progreso" action Show("revisar_progreso") style "lobby_button" at hover_scale
         textbutton "Guardar partida" action ShowMenu("save") style "lobby_button" at hover_scale
         textbutton "Salir del juego" action Return() style "lobby_button" at hover_scale
 
