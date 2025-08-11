@@ -63,7 +63,7 @@ screen revisar_progreso():
                                 text "[afinidad[personaje]] pts" style "puntos_afinidad"
                                 text "❤️ [corazones[personaje]]" style "corazones"
 
-            textbutton "Cerrar" action Hide("revisar_progreso") xalign 0.5:
+            textbutton "Cerrar" action Hide("revisar_progreso", transition=dissolve) xalign 0.5:
                 padding (10, 8)
                 hover_background "#FF7777"
                 xminimum 120

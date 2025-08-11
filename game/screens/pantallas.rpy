@@ -72,7 +72,7 @@ screen lobby_menu():
         spacing 30
 
         textbutton "Dormir" action Jump("avanzar_día") style "lobby_button" at hover_scale
-        textbutton "Revisar progreso" action Show("revisar_progreso") style "lobby_button" at hover_scale
+        textbutton "Revisar progreso" action Show("revisar_progreso", transition=dissolve) style "lobby_button" at hover_scale
         textbutton "Guardar partida" action ShowMenu("save") style "lobby_button" at hover_scale
         textbutton "Salir del juego" action Return() style "lobby_button" at hover_scale
 
