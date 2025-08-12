@@ -19,6 +19,7 @@ image bg kirisaki_intimidada_metro = im.Scale("images/backgrounds/kirisaki_intim
 image bg protegiendo_kirisaki = im.Scale("images/backgrounds/protegiendo_kirisaki.png", 1920, 1080)
 image bg casa = im.Scale("images/backgrounds/casa.png", 1920, 1080)
 image bg cuarto = im.Scale("images/backgrounds/cuarto.png", 1920, 1080)
+image bg casa_noche = im.Scale("images/backgrounds/casa_noche.png", 1920, 1080)
 
 # ==============================
 # TRANSFORMACIONES

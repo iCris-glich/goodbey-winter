@@ -10,6 +10,7 @@ define cha2 = Character("Chica desnocida 2")
 define ki = Character("Kirisaki", color="#e26640")
 define sh = Character("Shizuka", color="#8cd439")
 define ma = Character("Marika", color="#d65b84")
+define diosa = Character("Diosa del amor", color = "#dacf3aff")
 
 
 # ---- Shizuka ----
@@ -41,3 +42,7 @@ image marikatriste_blur = im.Blur(im.Scale("images/characters/marika/17544203059
 image kirisaki = im.Scale("images/characters/kirisaki/kirisaki_invierno-Photoroom.png", 650, 900)
 image kirisakiinviernoavergonzada = im.Scale("images/characters/kirisaki/kirisaki_invierno_avergonzada-Photoroom.png", 550, 900)
 image kirisakiinviernohablandoavergonzada = im.Scale("images/characters/kirisaki/kirisaki_invierno_hablando_avergonzada-Photoroom.png", 550, 900)
+
+# ---- Diosa -----
+image diosa = im.Scale("images/characters/diosa/diosa2.png", 750, 900)
+image diosa_soprendida = im.Scale("images/characters/diosa/diosa.png", 750, 900)

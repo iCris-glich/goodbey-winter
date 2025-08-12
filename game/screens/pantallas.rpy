@@ -59,47 +59,6 @@ screen pedir_nombre_screen():
                 xalign 0.5
                 action Return()
 
-screen lobby_menu():
-    tag menu
-
-    add im.Scale("images/backgrounds/cuarto.png", 1920, 1080)
-
-    frame:
-        style "lobby_frame"
-        xalign 0.5
-        yalign 0.5
-        has vbox
-        spacing 30
-
-        textbutton "Dormir" action Jump("avanzar_día") style "lobby_button" at hover_scale
-        textbutton "Revisar progreso" action Show("revisar_progreso", transition=dissolve) style "lobby_button" at hover_scale
-        textbutton "Guardar partida" action ShowMenu("save") style "lobby_button" at hover_scale
-        textbutton "Salir del juego" action Return() style "lobby_button" at hover_scale
-
-style lobby_frame:
-    background Solid("#00000080")  # negro con 50% opacidad
-    xminimum 520
-    yminimum 450
-    padding (40, 40)
-
-style lobby_button:
-    background "#66000088"  # semitransparente rojo oscuro
-    padding (20, 15)
-    font "fonts/SomeFont.ttf"
-    hover_background "#aa0000"
-    hover_foreground "#537c9750"
-    insensitive_background "#444444"
-    insensitive_foreground "#999999"
-    xminimum 400
-    yminimum 60
-    text_align 0.5
-
-transform hover_scale:
-    on hover:
-        linear 0.15 zoom 1.05
-    on idle:
-        linear 0.15 zoom 1.0
-
 
 image llaves = im.Scale("images/llaves.png", 150, 150)
 screen presentacion_llaves:
@@ -110,3 +69,56 @@ screen presentacion_llaves:
         padding(20,20)
         add "llaves"
 
+screen barra_progreso():
+    frame:
+        xalign 0.5
+        yalign 0.05
+        background Solid("#222222aa")
+        padding (15, 10)
+        vbox:
+            spacing 10
+            text "Progreso Shizuka: [barra_progreso['Shizuka']] / 100"
+            bar value barra_progreso["Shizuka"] range 100
+            text "Progreso Kirisaki: [barra_progreso['Kirisaki']] / 100"
+            bar value barra_progreso["Kirisaki"] range 100
+            text "Progreso Karen: [barra_progreso['Karen']] / 100"
+            bar value barra_progreso["Karen"] range 100
+            text "Progreso Marika: [barra_progreso['Marika']] / 100"
+            bar value barra_progreso["Marika"] range 100
+
+screen menu_flores():
+    frame: 
+        xalign 0.5
+        yalign 0.5
+        hbox:
+            spacing 100
+            imagebutton:
+                idle "rosa" at animacion
+                action [Function(aumentar_barra, "Shizuka", 100), Return("Shizuka")]
+            imagebutton:
+                idle "girasol" at animacion
+                action [Function(aumentar_barra, "Karen", 10), Return("Karen")]
+            imagebutton:
+                idle "margarita" at animacion
+                action [Function(aumentar_barra, "Marika", 10), Return("Marika")]
+            imagebutton:
+                idle "lirio" at animacion
+                action [Function(aumentar_barra, "Kirisaki", 10), Return("Kirisaki")]
+
+transform animacion:
+    ease 0.5 rotate 15
+    ease 0.5 rotate -15
+    repeat 
+
+transform agrandar:
+    zoom 1.1
+
+screen menu_cosas():
+    frame: 
+        xalign 0.5
+        yalign 0.5
+        hbox:
+            spacing 100
+            imagebutton: 
+                idle ""
+                action [Function(aumentar_barra, "Shizuka", 10), Return("Shizuka")]

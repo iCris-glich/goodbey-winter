@@ -18,6 +18,7 @@ default corazones = {
 }
 
 default ultimo_cambio_chica = None  # Rastrea la última chica con aumento de afinidad
+default cambio_corazones = True 
 
 # ================================
 # FUNCIONES DE AFINIDAD
@@ -47,8 +48,20 @@ init python:
 
     def actualizar_corazones():
         """Convierte los puntos de afinidad en corazones"""
+        global cambio_corazones, ultimo_cambio_chica
+        cambio = False 
+        ultimo_cambio_chica = None 
         for personaje in afinidad:
-            corazones[personaje] = afinidad[personaje] // 10  # 1 corazón cada 10 puntos
+            nuevos_corazones = afinidad[personaje] // 10
+            if nuevos_corazones > corazones.get(personaje, 0):
+                cambio = True 
+                ultimo_cambio_chica = personaje
+                corazones[personaje] = nuevos_corazones
+                break
+            else: 
+                corazones[personaje] = nuevos_corazones
+        cambio_corazones = cambio
+
 
     def obtener_afinidad(nombre):
         """Devuelve la afinidad actual de un personaje"""

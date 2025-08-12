@@ -1,12 +1,10 @@
 label introduccion:
 
     scene bg invierno at rederisionar with wipeup
+   
+    pause 0.5
     play music "audio/soundtrack/Love Plus [NDS Music] - Silent Night - Aedithy.mp3" fadein 0.5
     
-    pause 0.5
-    play sound "audio/soundtrack/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
-    "*Murmullos*"
-
     "Navidad en Japón es una época muy hermosa y llena de amor."
     "Los jóvenes se declaran y todos están en parejas."
 
@@ -225,8 +223,9 @@ label introduccion:
     pause 0.5
 
     scene bg restaurante with fade 
-    play sound "audio/soundtrack/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
     play music "audio/soundtrack/Love Plus [NDS Music] - Holiday (Daylight) - Aedithy.mp3" fadein 0.5
+    play sound "audio/effects/Sonido de gente hablando_sonido ambiente - Girona Studios.mp3"
+    
     scene bg restaurante at desenfoque with dissolve
     show marikafeliz with dissolve 
     ma "Nada como el olor a fideos recién hechos... {w=0.5}Rápido, pidamos una mesa."

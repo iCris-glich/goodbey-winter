@@ -27,6 +27,7 @@ style style_progreso:
     yminimum 600
     drop_shadow [2, 2, 5, "#00000080"]
 
+
 screen revisar_progreso():
     modal True
     
@@ -61,6 +62,7 @@ screen revisar_progreso():
                                 spacing 5
                                 text "[personaje]:" style "nombre_personaje"
                                 text "[afinidad[personaje]] pts" style "puntos_afinidad"
+                                bar range 100 value afinidad[personaje] xminimum 600
                                 text "❤️ [corazones[personaje]]" style "corazones"
 
             textbutton "Cerrar" action Hide("revisar_progreso", transition=dissolve) xalign 0.5:
