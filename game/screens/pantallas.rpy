@@ -122,3 +122,8 @@ screen menu_cosas():
             imagebutton: 
                 idle ""
                 action [Function(aumentar_barra, "Shizuka", 10), Return("Shizuka")]
+
+screen dia():
+    frame:
+        align (0.95, 0.05)
+        text "Dia [dia_actual]" color "#FFFFFF"

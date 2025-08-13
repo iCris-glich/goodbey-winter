@@ -12,11 +12,13 @@ label minijuego_sueño:
 
     pause 1.0
 
-    play music "audio/soundtrack/Love Plus [NDS Music] - Afternoon Park - Aedithy.mp3" fadein 0.5
     scene bg arboldenavidad at desenfoque with fade 
 
     e "¿Ehh?..."
     e "¿Donde estoy?..."
+
+    play music "audio/soundtrack/Love Plus [NDS Music] - Afternoon Park - Aedithy.mp3" fadein 0.5
+
 
     pause 0.5
 
@@ -57,8 +59,17 @@ label minijuego_sueño:
     show diosa_soprendida with dissolve 
     
     $ mayor, puntos = personaje_mayor_afinidad()
-    diosa "Acaso sera... [mayor]?..."
+    diosa "[mayor]?..."
+
+    e "..."
+
+    diosa "Veo que sigues confundido, no te preocupes"
+    diosa "Solo selecciona uno de estos objetos"
+
+    e "¿Y esto como me ayudara?"
     
+    diosa "Todo se aclarara cuando temrinemos"
+
     if cambio_corazones: 
         $ cambio_corazones = False 
         $ eleccion = renpy.call_screen("menu_flores")
@@ -85,7 +96,9 @@ label minijuego_sueño:
     pause 0.5
     hide screen pantalla_corazones with dissolve 
 
-    diosa "[nombre_protagonista] no te preocupes, aqui estoy cada ves que lo necesites... en tus sueños..."
+    diosa "Mira cada que te vayas a dormir yo estare aqui para guiarte en tu camino."
+    diosa "Evaluaremos si todo esta bien con tus desiciones."
+    diosa "Y recuerda aqui estoy cada vez que lo necesites... en tus sueños..."
     diosa "Adios [nombre_protagonista]"
 
     hide diosa_soprendida with dissolve 
@@ -94,6 +107,12 @@ label minijuego_sueño:
     e "..."
 
     scene black with fade 
+
+    $ siguiente_dia()
+
+    show screen dia with dissolve  
+    pause 0.5 
+    hide screen dia with dissolve 
 
     ""
     return 

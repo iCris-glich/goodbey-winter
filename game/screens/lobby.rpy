@@ -1,3 +1,10 @@
+default dia_actual = 1
+
+init python:
+    def siguiente_dia():
+        global dia_actual
+        dia_actual += 1
+
 label lobby:
     scene bg casa_noche with dissolve 
     window hide

@@ -3,7 +3,7 @@ label seguir_a_shizuka:
     
     show shizukafeliz with dissolve 
 
-    sh "Entonces quieres venir conmigo, ¿ves que sí te gusto?"
+    sh "Entonces quieres ve nir conmigo, ¿ves que sí te gusto?"
 
     e "Solo vamos, quiero pensar en algunas cosas durante el camino."
 
